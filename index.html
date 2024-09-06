@@ -11,6 +11,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 100vh;
         margin: 0;
       }
@@ -21,6 +22,16 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
+      footer {
+        margin-top: auto;
+        padding: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -29,5 +40,14 @@
       <p>Generate a random poem by clicking the button below!</p>
       <button>Generate Poem</button>
     </div>
+
+    <footer>
+      This project was coded by Shanice Jones and is hosted on
+      <a href="https://github.com/OShaniceO/Poem-AI" target="_blank">GitHub</a>
+      and
+      <a href="https://dreamy-madeleine-c5ec41.netlify.app/" target="_blank"
+        >Netlify</a
+      >.
+    </footer>
   </body>
 </html>
