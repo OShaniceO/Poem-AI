@@ -4,70 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poem AI</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        flex-direction: column;
-      }
-      .container {
-        text-align: center;
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 500px;
-      }
-      input[type="text"] {
-        padding: 10px;
-        width: 90%;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      button {
-        padding: 10px 20px;
-        border: none;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-        border-radius: 5px;
-      }
-      button:hover {
-        background-color: #0056b3;
-      }
-      footer {
-        margin-top: 20px;
-        font-size: 14px;
-        color: #555;
-      }
-      a {
-        color: #007bff;
-        text-decoration: none;
-      }
-    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Poem Generator</h1>
-      <form>
+      <form id="poemForm">
         <input
           type="text"
+          id="poemTopic"
           placeholder="Enter the topic of the poem"
           autofocus
           required
         />
-        <br />
         <button type="submit">Generate Poem</button>
       </form>
+    </div>
+
+    <div class="poem-box" id="poemBox">
+      <p>
+        White broken mirror<br />
+        I saw my reflection blink<br />
+        There's something wrong here
+      </p>
     </div>
 
     <footer>
@@ -78,5 +45,7 @@
         >Netlify</a
       >.
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
