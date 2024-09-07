@@ -72,3 +72,47 @@ a {
   color: #007bff;
   text-decoration: none;
 }
+
+.hint-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  border: 1px solid #007bff;
+  width: 250px;
+  text-align: center;
+}
+
+.hint-box p {
+  margin: 0;
+  font-weight: bold;
+  position: relative;
+}
+
+.hint-box p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #007bff;
+  animation: fadeUnderline 1.5s infinite alternate;
+}
+
+@keyframes fadeUnderline {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}

@@ -15,11 +15,14 @@ function generatePoem(event) {
   event.preventDefault();
 
   const poemTopic = document.getElementById("poemTopic").value;
+  const mainHeading = document.getElementById("mainHeading");
 
   if (!poemTopic) {
     startTypewriter("#poem", "Please enter a topic to generate a poem.");
     return;
   }
+
+  mainHeading.innerText = `Generating Poems About "${poemTopic}"`;
 
   fetch(`https://api.datamuse.com/words?ml=${poemTopic}`)
     .then((response) => response.json())
@@ -67,4 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const placeholderPoem = `White broken mirror\nI saw my reflection blink\nThere's something wrong here`;
 
   startTypewriter(poemElement, placeholderPoem);
+
+  document.getElementById("mainHeading").innerText = "Poem Generator";
 });
